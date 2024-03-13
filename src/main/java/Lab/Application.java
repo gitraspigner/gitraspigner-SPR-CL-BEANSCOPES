@@ -36,9 +36,10 @@ public class Application {
     }
 
     /**
-     * TODO: correct the following code so that a new ScopedBean is instantiated every time the labBean is requested.
+     * DONE: correct the following code so that a new ScopedBean is instantiated every time the labBean is requested.
      */
     @Bean
+    @Scope(value = "prototype")
     public ScopedBean labBean(){
         return new ScopedBean();
     }
@@ -72,6 +73,7 @@ public class Application {
         }else{
             System.out.println("success: b3 and b4 are not the same object.");
         }
+        
     }
 
 }
